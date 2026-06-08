@@ -1,0 +1,346 @@
+{
+  "version": 1,
+  "author": "Velxio",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "potentiometer_1780905231333_7rn6620vg",
+      "top": -186,
+      "left": -47,
+      "attrs": {
+        "min": 0,
+        "max": 1023,
+        "value": 500,
+        "step": 1,
+        "startDegree": -135,
+        "endDegree": 135
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "potentiometer_1780905263853_uaowxbm88",
+      "top": -185,
+      "left": -188,
+      "attrs": {
+        "min": 0,
+        "max": 1023,
+        "value": 530,
+        "step": 1,
+        "startDegree": -135,
+        "endDegree": 135
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "potentiometer_1780905270260_6cpyel9i5",
+      "top": -183,
+      "left": -336,
+      "attrs": {
+        "min": 0,
+        "max": 1023,
+        "value": 648,
+        "step": 1,
+        "startDegree": -135,
+        "endDegree": 135
+      }
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht22_1780905318348_illqikso0",
+      "top": -76,
+      "left": -536,
+      "attrs": {
+        "rotation": 270
+      }
+    },
+    {
+      "type": "wokwi-photodiode",
+      "id": "photodiode_1780905346108_mf82a9r6f",
+      "top": 307,
+      "left": -406,
+      "attrs": {
+        "lux": 500
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "pushbutton_1780905366435_ohgy5nbqj",
+      "top": 122,
+      "left": -558,
+      "attrs": {
+        "color": "red",
+        "pressed": false,
+        "label": "",
+        "xray": false
+      }
+    },
+    {
+      "type": "wokwi-relay",
+      "id": "relay_1780905385579_1oktxl0ij",
+      "top": -200,
+      "left": 191,
+      "attrs": {
+        "coil_voltage": 5,
+        "coil_resistance": 70,
+        "include_flyback": true
+      }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer_1780905402219_yumk6z3gf",
+      "top": -17,
+      "left": 221,
+      "attrs": {
+        "hasSignal": false
+      }
+    },
+    {
+      "type": "wokwi-ssd1306-i2c",
+      "id": "ssd1306_i2c_1780905421210_asnr8nxb2",
+      "top": 396,
+      "left": 46,
+      "attrs": {
+        "protocol": "i2c"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_1780905451946_fjd21yvbc",
+      "top": -14,
+      "left": 512,
+      "attrs": {
+        "value": false,
+        "brightness": 1,
+        "color": "red",
+        "lightColor": null,
+        "label": "",
+        "flip": false
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_1780905478065_9yj27j826",
+      "top": 285,
+      "left": 532,
+      "attrs": {
+        "value": false,
+        "brightness": 1,
+        "color": "green",
+        "lightColor": null,
+        "label": "",
+        "flip": false,
+        "rotation": 0
+      }
+    },
+    {
+      "type": "wokwi-resistor-220",
+      "id": "resistor_220_1780905855679_hp21izm5h",
+      "top": 116,
+      "left": 499,
+      "attrs": {
+        "value": "220",
+        "rotation": 90
+      }
+    },
+    {
+      "type": "wokwi-resistor-220",
+      "id": "resistor_220_1780905876798_ju956j0ro",
+      "top": 426,
+      "left": 513,
+      "attrs": {
+        "value": "220",
+        "rotation": 90
+      }
+    }
+  ],
+  "connections": [
+    [
+      "potentiometer_1780905231333_7rn6620vg:SIG",
+      "esp32:34",
+      "#22c55e",
+      []
+    ],
+    [
+      "potentiometer_1780905263853_uaowxbm88:SIG",
+      "esp32:35",
+      "#22c55e",
+      []
+    ],
+    [
+      "potentiometer_1780905270260_6cpyel9i5:SIG",
+      "esp32:32",
+      "#22c55e",
+      []
+    ],
+    [
+      "esp32:4",
+      "dht22_1780905318348_illqikso0:SDA",
+      "#22c55e",
+      []
+    ],
+    [
+      "pushbutton_1780905366435_ohgy5nbqj:2.r",
+      "esp32:GND",
+      "black",
+      []
+    ],
+    [
+      "pushbutton_1780905366435_ohgy5nbqj:1.l",
+      "esp32:25",
+      "#22c55e",
+      []
+    ],
+    [
+      "photodiode_1780905346108_mf82a9r6f:C",
+      "esp32:GND",
+      "black",
+      []
+    ],
+    [
+      "photodiode_1780905346108_mf82a9r6f:A",
+      "esp32:33",
+      "#22c55e",
+      []
+    ],
+    [
+      "esp32:26",
+      "relay_1780905385579_1oktxl0ij:COIL+",
+      "#22c55e",
+      []
+    ],
+    [
+      "relay_1780905385579_1oktxl0ij:COIL-",
+      "esp32:GND2",
+      "black",
+      []
+    ],
+    [
+      "esp32:27",
+      "buzzer_1780905402219_yumk6z3gf:2",
+      "#22c55e",
+      []
+    ],
+    [
+      "buzzer_1780905402219_yumk6z3gf:1",
+      "esp32:GND2",
+      "black",
+      []
+    ],
+    [
+      "led_1780905451946_fjd21yvbc:A",
+      "resistor_220_1780905855679_hp21izm5h:1",
+      "#22c55e",
+      []
+    ],
+    [
+      "esp32:14",
+      "resistor_220_1780905855679_hp21izm5h:2",
+      "#22c55e",
+      []
+    ],
+    [
+      "led_1780905478065_9yj27j826:A",
+      "resistor_220_1780905876798_ju956j0ro:1",
+      "#22c55e",
+      []
+    ],
+    [
+      "esp32:12",
+      "resistor_220_1780905876798_ju956j0ro:2",
+      "#22c55e",
+      []
+    ],
+    [
+      "led_1780905451946_fjd21yvbc:C",
+      "esp32:GND2",
+      "black",
+      []
+    ],
+    [
+      "led_1780905478065_9yj27j826:C",
+      "esp32:GND2",
+      "black",
+      []
+    ],
+    [
+      "esp32:3V3",
+      "potentiometer_1780905231333_7rn6620vg:VCC",
+      "#cc0000",
+      []
+    ],
+    [
+      "potentiometer_1780905231333_7rn6620vg:GND",
+      "esp32:GND",
+      "black",
+      []
+    ],
+    [
+      "potentiometer_1780905263853_uaowxbm88:VCC",
+      "esp32:3V3",
+      "#cc0000",
+      []
+    ],
+    [
+      "potentiometer_1780905263853_uaowxbm88:GND",
+      "esp32:GND",
+      "black",
+      []
+    ],
+    [
+      "potentiometer_1780905270260_6cpyel9i5:VCC",
+      "esp32:3V3",
+      "#cc0000",
+      []
+    ],
+    [
+      "potentiometer_1780905270260_6cpyel9i5:GND",
+      "esp32:GND",
+      "black",
+      []
+    ],
+    [
+      "dht22_1780905318348_illqikso0:GND",
+      "esp32:GND",
+      "black",
+      []
+    ],
+    [
+      "dht22_1780905318348_illqikso0:VCC",
+      "esp32:3V3",
+      "#cc0000",
+      []
+    ],
+    [
+      "esp32:GND2",
+      "ssd1306_i2c_1780905421210_asnr8nxb2:GND",
+      "black",
+      []
+    ],
+    [
+      "ssd1306_i2c_1780905421210_asnr8nxb2:3V3",
+      "esp32:3V3",
+      "#cc0000",
+      []
+    ],
+    [
+      "ssd1306_i2c_1780905421210_asnr8nxb2:DATA",
+      "esp32:21",
+      "#22c55e",
+      []
+    ],
+    [
+      "esp32:22",
+      "ssd1306_i2c_1780905421210_asnr8nxb2:CLK",
+      "#22c55e",
+      []
+    ]
+  ]
+}

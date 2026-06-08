@@ -1,30 +1,80 @@
 # ⚡ IoT Smart Grid Monitoring and Fault Detection System
 
 <p align="center">
+  <img src="images/project_view_1.png" width="1000">
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/ESP32-IoT-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/Blynk-Cloud-green?style=for-the-badge">
   <img src="https://img.shields.io/badge/Embedded-C++-orange?style=for-the-badge">
   <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge">
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge">
 </p>
 
-## 📌 Overview
-
-The **IoT Smart Grid Monitoring and Fault Detection System** is an intelligent power monitoring solution designed to continuously monitor electrical parameters and detect abnormal conditions in real time.
-
-The system uses an **ESP32 microcontroller** to collect voltage, current, frequency, temperature, and light intensity data. It automatically identifies faults such as overvoltage, undervoltage, overload, high temperature, and emergency conditions, then activates protection mechanisms including relays, buzzers, and visual indicators.
-
-Data is displayed simultaneously on:
-
-* 🌐 Web Dashboard
-* 📱 Blynk IoT Dashboard
-* 🖥 OLED Display
-* 📟 Serial Monitor
+<p align="center">
+  <b>Real-Time Smart Grid Monitoring, Fault Detection, and Protection System using ESP32, Blynk IoT, OLED Display, and Web Dashboard</b>
+</p>
 
 ---
 
-## 🚀 Features
+# 📌 Overview
 
-### Real-Time Monitoring
+The **IoT Smart Grid Monitoring and Fault Detection System** is an intelligent power monitoring solution designed to continuously monitor critical electrical parameters and automatically detect abnormal operating conditions in real time.
+
+The system utilizes an **ESP32 microcontroller** to acquire sensor data, analyze grid conditions, trigger protection mechanisms, and provide cloud-based monitoring through **Blynk IoT**, a **Web Dashboard**, **OLED Display**, and **Serial Monitor**.
+
+This project demonstrates concepts from:
+
+* Smart Grids
+* Embedded Systems
+* Industrial Automation
+* Power System Protection
+* Internet of Things (IoT)
+
+---
+
+# 📸 Project Gallery
+
+## Complete System
+
+<p align="center">
+  <img src="images/project_view_1.png" width="850">
+</p>
+
+## Hardware Setup
+
+<p align="center">
+  <img src="images/hardware_setup.png" width="850">
+</p>
+
+## Dashboard Screens
+
+<p align="center">
+  <img src="images/dashboard_1.png" width="850">
+</p>
+
+<p align="center">
+  <img src="images/dashboard_2.png" width="850">
+</p>
+
+<p align="center">
+  <img src="images/dashboard_3.png" width="850">
+</p>
+
+<p align="center">
+  <img src="images/dashboard_4.png" width="850">
+</p>
+
+<p align="center">
+  <img src="images/dashboard_5.png" width="850">
+</p>
+
+---
+
+# 🚀 Features
+
+## Real-Time Monitoring
 
 * Voltage Monitoring
 * Current Monitoring
@@ -32,7 +82,7 @@ Data is displayed simultaneously on:
 * Temperature Monitoring
 * Light Intensity Monitoring
 
-### Fault Detection
+## Intelligent Fault Detection
 
 * Overvoltage Detection
 * Undervoltage Detection
@@ -41,23 +91,24 @@ Data is displayed simultaneously on:
 * High Temperature Detection
 * Emergency Shutdown Detection
 
-### Protection System
+## Protection System
 
 * Automatic Relay Control
 * Fault Isolation
 * Audible Alarm System
 * Visual Fault Indicators
 
-### IoT Capabilities
+## IoT Connectivity
 
 * WiFi Connectivity
-* Blynk Cloud Integration
-* Web-Based Dashboard
+* Blynk Cloud Dashboard
+* Web Dashboard
 * Remote Monitoring
+* Live Data Streaming
 
 ---
 
-## 🏗 System Architecture
+# 🏗 System Architecture
 
 ```text
 Sensors
@@ -73,28 +124,30 @@ ESP32 Controller
    ▼
 WiFi Network
    │
-   ├── Blynk Dashboard
+   ├── Blynk Cloud Dashboard
    ├── Web Dashboard
    └── Serial Monitoring
 ```
 
-## 🔌 Hardware Components
+---
 
-| Component       | Purpose                |
+# 🔌 Hardware Components
+
+| Component       | Function               |
 | --------------- | ---------------------- |
 | ESP32 DevKit V1 | Main Controller        |
-| DHT22           | Temperature Monitoring |
+| DHT22 Sensor    | Temperature Monitoring |
 | OLED SSD1306    | Local Display          |
 | Relay Module    | Load Protection        |
-| Buzzer          | Alarm System           |
-| Photodiode      | Light Detection        |
+| Buzzer          | Fault Alarm            |
+| Photodiode      | Light Monitoring       |
 | Push Button     | Emergency Trigger      |
-| LEDs            | Status Indicators      |
+| LEDs            | Status Indication      |
 | Potentiometers  | Sensor Simulation      |
 
 ---
 
-## 📊 Parameters Monitored
+# 📊 Parameters Monitored
 
 | Parameter       | Range       |
 | --------------- | ----------- |
@@ -106,9 +159,9 @@ WiFi Network
 
 ---
 
-## ⚠ Fault Conditions
+# ⚠ Fault Detection Logic
 
-| Fault Type       | Trigger Condition   |
+| Fault Condition  | Trigger             |
 | ---------------- | ------------------- |
 | Overvoltage      | Voltage > 245V      |
 | Undervoltage     | Voltage < 200V      |
@@ -119,45 +172,46 @@ WiFi Network
 
 ---
 
-## 🛡 Protection Logic
+# 🛡 Protection Mechanism
 
 When a fault is detected:
 
 ✅ Relay Disconnects Load
 
-✅ Buzzer Activates
+✅ Buzzer Alarm Activates
 
 ✅ Red LED Turns ON
 
 ✅ Green LED Turns OFF
 
-✅ Dashboard Updates
+✅ Dashboard Updates in Real-Time
 
-✅ Status Logged to Serial Monitor
+✅ Event Logged to Serial Monitor
 
 ---
 
-## 📱 Dashboard Features
+# 📱 Dashboard Features
 
-### Blynk Dashboard
+## Blynk IoT Dashboard
 
-* Live Voltage Gauge
+* Voltage Gauge
 * Current Gauge
 * Frequency Gauge
 * Temperature Gauge
 * Status Display
-* Real-Time Updates
+* Real-Time Monitoring
 
-### Web Dashboard
+## Web Dashboard
 
-* Modern Responsive Interface
-* Live Monitoring
+* Responsive Interface
 * Auto Refresh
-* Fault Status Visualization
+* Live Monitoring
+* Fault Visualization
+* Remote Access
 
 ---
 
-## 🖥 OLED Display
+# 🖥 OLED Display
 
 Displays:
 
@@ -172,20 +226,24 @@ System Status
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
 ```text
-IoT-Smart-Grid-Monitoring-System/
+IoT-Smart-Grid-Monitoring-System
 │
-├── src/
+├── src
 │   └── main.ino
 │
-├── images/
-│   ├── dashboard.png
-│   ├── hardware.png
-│   └── architecture.png
+├── images
+│   ├── project_view_1.png
+│   ├── hardware_setup.png
+│   ├── dashboard_1.png
+│   ├── dashboard_2.png
+│   ├── dashboard_3.png
+│   ├── dashboard_4.png
+│   └── dashboard_5.png
 │
-├── docs/
+├── docs
 │   └── project_report.pdf
 │
 ├── README.md
@@ -194,7 +252,7 @@ IoT-Smart-Grid-Monitoring-System/
 
 ---
 
-## 🛠 Technologies Used
+# 🛠 Technologies Used
 
 * ESP32
 * Embedded C++
@@ -207,40 +265,59 @@ IoT-Smart-Grid-Monitoring-System/
 
 ---
 
-## 🎯 Applications
+# 🎯 Applications
 
 * Smart Grid Monitoring
-* Industrial Automation
 * Power Distribution Systems
+* Industrial Automation
 * Energy Management
 * Smart Infrastructure
 * Electrical Safety Systems
+* Remote Monitoring Systems
 
 ---
 
-## 📈 Future Enhancements
+# 📈 Future Enhancements
 
 * AI-Based Fault Prediction
-* Power Consumption Analytics
+* Predictive Maintenance
+* Energy Consumption Analytics
 * Cloud Database Integration
 * Mobile Notifications
-* Predictive Maintenance
-* Energy Forecasting
+* Smart Energy Forecasting
+* Machine Learning Integration
 
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
-### Sumit Kumar
+## Sumit Kumar
 
-Electrical & Electronics Engineering (EEE)
+**Electrical & Electronics Engineering (EEE)**
 
 Embedded Systems | IoT | AI & Robotics
 
 📍 Bihar, India
 
+### Connect With Me
+
+* GitHub: https://github.com/sumitraj7766
+* LinkedIn: Add your LinkedIn profile link here
+
 ---
 
-## ⭐ If you found this project useful
+# ⭐ Support
 
-Give this repository a star and support future IoT innovations.
+If you found this project useful:
+
+⭐ Star this repository
+
+🍴 Fork this repository
+
+📢 Share it with others
+
+---
+
+<p align="center">
+  Made with ❤️ by Sumit Kumar
+</p>
